@@ -1,9 +1,55 @@
-to start the server you must install node.js
+# MAM
 
-node-v
+Website for the Beaucaire Mosque Association.
+
+## Requirements
+
+Before starting the project, make sure that Node.js is installed on your computer.
+
+Check your installation:
+
+```bash
+node -v
 npm -v
-^- you should have a respond (not an error)
+```
 
+You should see version numbers displayed. If you get an error, install Node.js and try again.
+
+## Start the development server
+
+Navigate to the project folder:
+
+```bash
 cd mam
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
-^- should start with your ip adress (accessible with any other device connected to the same wi fil)
+```
+
+You should see an output similar to:
+
+```bash
+Local:   http://localhost:5173/
+Network: http://192.168.x.x:5173/
+```
+
+The **Network** address can be accessed from any device connected to the same Wi-Fi network.
+
+## Technologies
+
+* Vite
+* Three.js
+* HTML
+* CSS
+* JavaScript
+* GSAP
+* Lenis
