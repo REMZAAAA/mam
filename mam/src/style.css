@@ -1,0 +1,487 @@
+:root {
+
+  --d100: #0f0f0f;
+  --d200: #242424;  
+  --d300: #303030;  
+
+  --l100: #f4f4f4;
+  --l200: #cfcfcf;
+  --l300: #b4b4b4;
+
+  --acc: #8651e9;
+}
+
+/*  */
+
+*{
+  padding: 0; margin: 0;
+  box-sizing: border-box;
+
+  font-family: "Instrument Sans";
+}
+
+body{
+  background-color: var(--d100);
+}
+
+/*  */
+
+a{
+  text-decoration: none;
+  color: var(--l100);
+}
+
+li{
+  list-style: none;
+}
+
+/* main */
+
+main{
+  width: 100vw;
+  color: var(--l100);
+
+  /* background-color: var(--d100); */
+}
+
+/* header */
+
+header{
+  height: calc(100dvh - 50px);
+  min-height: 300px;
+
+  width: 100vw;
+  display: flex; flex-direction: column;
+
+  position: sticky;
+  top: 0;
+
+  background-color: var(--d100);
+}
+
+/* navbar */
+
+#navbar{
+  width: 100vw;
+  display: flex;
+  padding: 10px 40px;
+  z-index: 999;
+
+  /* background-color: blue; */
+}
+
+#navbar .navLinks{
+  display: flex;
+  gap: 10px;
+
+  height: 40px;
+
+  /* background-color: yellow; */
+}
+
+#navbar .navLinks a{
+  height: 40px;
+  padding-inline: 30px;
+  border-radius: 25px;
+
+  display: flex;
+  justify-content: center; align-items: center;
+
+  text-align: center;
+  font-weight: 600;
+  background-color: var(--d200);
+}
+
+#navbar .navLinks a:hover{
+  background-color: var(--d300);
+}
+
+@media screen and (max-width: 500px) {
+  #navbar{
+    padding: 10px 10px;
+  }
+  #navbar .navLinks a{
+    padding-inline: 15px;
+  }
+}
+
+/* hero */
+
+#hero{
+  min-height: 200px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  /* background-color: blue; */
+}
+
+#hero div{
+  display: flex; flex-direction: column;
+  align-items: end;
+  margin-inline: auto;
+
+  /* background-color: blue; */
+}
+
+#hero .heroContent h1{
+  font-size: 12vw;
+  text-align: right;
+}
+#hero .heroContent p{
+  font-size: 2vw;
+  color: var(--l300);
+}
+
+#hero div.vertical{
+  display: flex; flex-direction: row;
+  align-items: start;
+
+  /* background-color: yellow; */
+}
+
+#hero h1.vertical, #hero p.vertical{
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+#hero h1.vertical{
+  font-size: 10vh;
+  /* background-color: red; */
+}
+#hero p.vertical{
+  font-size: 2vh;
+  /* background-color: orange; */
+}
+
+#hero aside{
+  width: 50px; height: 100%;
+
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: end;
+  padding-block: 50px;
+
+  /* background-color: red; */
+}
+
+#hero aside:nth-of-type(1){
+  display: flex; flex-direction: column;
+  gap: 10px;
+}
+#hero aside:nth-of-type(1) span{
+  width: 40px; height: 40px;
+  border-radius: 50%;
+
+  background-color: var(--d200);
+}
+#hero aside:nth-of-type(2) p{
+  display: flex; align-items: center;
+  gap: 10px;
+  /* padding-inline: 20px; */
+
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+  /* background-color: blue; */
+}
+#hero aside:nth-of-type(2) span{
+  width: 1.5px; height: 20px;
+  background-color: var(--l100);
+}
+
+/* prayer times */
+
+#prayerTimes{
+  position: relative;
+  height: max(400px, 100dvh);
+
+  display: flex; flex-direction: column;
+  justify-content: start;
+  gap: 25px;
+  
+  padding: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+
+  background-color: var(--l200);
+  color: var(--d100);
+}
+
+#prayerTimes h1{
+  display: flex;
+  justify-content: space-between;
+  font-size: 4vw;
+}
+
+#prayerTimes h1 span{
+  display: flex; flex-wrap: wrap;
+  justify-content: end; align-items: center;
+  gap: 2vw;
+
+  /* background-color: red; */
+}
+
+.prayerContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+  height: 100%;
+
+  /* background-color: green; */
+}
+
+.prayer{
+  /* flex: 1; */
+  width: 100%;
+  display: flex;
+  min-width: 250px;
+  padding-block: 20px;
+
+  margin-inline: auto;
+  /* padding-inline: 4vw; */
+  border-radius: 50px;
+
+  background-color: var(--d300);
+  color: var(--l100);
+}
+
+.prayer>p{
+  flex: 1;
+  display: flex;
+  justify-content: center; align-items: center;
+
+  /* border-radius: 50px; */
+  /* padding-block: 10px; */
+  font-size: clamp(1rem, 3vw, 4vh);
+
+  /* background-color: blue; */
+}
+
+.prayer:nth-of-type(1){
+  background-color: var(--acc);
+}
+
+/* virtual tour */
+
+#virtualTour{
+  position: relative;
+  height: max(400px, 100dvh);
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between; align-items: start;
+
+  padding: 25px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  background-color: var(--l300);
+  color: var(--d100);
+}
+
+/* sidebar */
+
+#sidebar{
+  height: 100%;
+  display: flex; flex-direction: column;
+  gap: 10px;
+  position: relative;
+
+  /* background-color: red; */
+
+  transition: all .6s ease;
+
+  z-index: 1;
+  /* font-size: clamp(.5rem, 3vw, 1vh); */
+}
+
+.mainContent{
+  position: relative;
+  overflow: scroll;
+
+  width: auto;
+  max-height: calc(100% - 50px);
+
+  display: flex; flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+
+  border-radius: 25px;
+  background-color: var(--d100);
+}
+
+.mainContent span{
+  display: flex;
+  /* background-color: red; */
+}
+
+.mainContent span a{
+  flex: 1;
+  padding: 5px 15px;
+  border-radius: 25px;
+  background-color: var(--d200);
+}
+.mainContent span a:hover{
+  background-color: var(--d300);
+}
+
+.mainContent a.active{
+  background-color: var(--acc);
+}
+.mainContent span a.active:hover{
+  background-color: var(--acc);
+}
+
+.mainContent h3{
+  padding-bottom: 10px;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--l100);
+
+  /* background-color: red; */
+}
+
+/* anchors links */
+
+#anchorsLinks div{
+  display: flex; flex-direction: column;
+  gap: 5px;
+}
+
+/* settings */
+
+#settings{
+  display: flex; flex-direction: column;
+  color: var(--l100);
+}
+
+#settings>div{
+  display: flex; flex-direction: column;
+  gap: 5px;
+}
+
+#settings>div div{
+  position: relative;
+  display: flex;
+  justify-content: space-between; align-items: center;
+  gap: 10px;
+
+  padding: 5px 15px;
+  border-radius: 25px;
+  background-color: var(--d200);
+}
+
+#settings>div div:hover{
+  background-color: var(--d300);
+}
+
+#settings .active{
+  background-color: var(--acc);
+}
+
+#settings>div div.active:hover{
+  background-color: var(--acc);
+}
+
+#settings p{
+  width: max-content;
+  /* background-color: red; */
+}
+
+#settings .slidder{
+  position: relative;
+  width: 35px; height: 16px;
+
+  border-radius: 25px;
+  pointer-events: none;
+  background-color: var(--l100);
+}
+
+#settings .slidder span{
+  position: absolute;
+  top: 3px; left: 5px;
+
+  width: 15px; height: 10px;
+  transform: translateX(0);
+
+  border-radius: 25px;
+  background-color: var(--l300);
+  transition: all .5s ease;
+}
+
+#settings input{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+
+  cursor: pointer;
+  opacity: 0;
+}
+
+#settings input:checked + .slidder span{
+  transform: translateX(calc(100% - 5px));
+  background-color: var(--acc);
+}
+
+#sidebar aside{
+  position: relative;
+  width: 100%; height: 50px;
+  border-radius: 25px;
+  background-color: var(--d100);
+
+  transition: all .6s ease;
+}
+
+#sidebar aside span{
+  width: 50px; height: 50px;
+  display: flex;
+  justify-content: center; align-items: center;
+  margin-left: calc(50% - 25px);
+  
+  transform: rotate(180deg);
+  pointer-events: none;
+
+  font-size: 2rem;
+  color: var(--l100);
+
+  transition: all .6s ease;
+}
+
+#sidebar aside input{
+  position: absolute;
+  top: 0; left: 0;
+
+  width: 100%; height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+#sidebar.hide{
+  transform: translateX(-100%);
+}
+
+
+#sidebar.hide aside{
+  transform: translateX(40px);
+  background-color: var(--acc);
+}
+
+#sidebar.hide aside span{
+  transform: rotate(0deg);
+  margin-left: calc(100% - 60px);
+}
+
+/* canvas */
+
+#webgl{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+
+  z-index: 0;
+
+  /* background-color: red; */
+}
+

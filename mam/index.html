@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Mousinine (Beaucaire)</title>
+  <link rel="stylesheet" href="./src/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <main>
+    <header>
+      <nav id="navbar">
+        <div class="navLinks">
+          <a href="#">Home</a>
+          <a href="#prayerTimes">Horaires</a>
+          <a href="#virtualTour">Visite virtuelle</a>
+        </div>
+      </nav>
+
+      <div id="hero">
+        <aside>
+          <span></span>
+          <span></span>
+        </aside>
+        <div class="heroContent">
+          <h1 class="heroTitle">مسجد المحسنين</h1>
+          <p class="heroSubtitle">Un refuge de paix, de foi et de communion.</p>
+        </div>
+        <aside>
+          <p>
+            &copy;
+            <a href="https://hchamrouk.com">179se.</a>
+            <span></span>
+            2025
+          </p>
+        </aside>
+      </div>
+    </header>
+
+    <div id="prayerTimes">
+      <h1>
+        Horaires de prière
+        <span>
+          <p>Chourouk</p>
+          <p>00:00</p>
+        </span>
+      </h1>
+
+      <div class="prayerContainer">
+        <div class="prayer">
+          <p>Fajr</p>
+          <p>00:00</p>
+          <p>+00</p>
+        </div>
+        <div class="prayer">
+          <p>Dhuhr</p>
+          <p>00:00</p>
+          <p>+00</p>
+        </div>
+        <div class="prayer">
+          <p>Asr</p>
+          <p>00:00</p>
+          <p>+00</p>
+        </div>
+        <div class="prayer">
+          <p>Mahgrib</p>
+          <p>00:00</p>
+          <p>+00</p>
+        </div>
+        <div class="prayer">
+          <p>Isha</p>
+          <p>00:00</p>
+          <p>+00</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="virtualTour">
+      <div id="sidebar" class="hide">
+        <div class="mainContent" data-lenis-prevent>
+          <div id="anchorsLinks">
+            <h3>ancres</h3>
+            <div>
+              <span><a href="" data-anchor="anchor1" class="active">face avant</a></span>
+              <span><a href="" data-anchor="anchor2">entrée principale</a></span>
+              <span><a href="" data-anchor="anchor3">zone d’ablutions / WC</a></span>
+              <span><a href="" data-anchor="anchor4">salle principale 1</a></span>
+              <span><a href="" data-anchor="anchor5">salle principale 2</a></span>
+              <span><a href="" data-anchor="anchor6">salle principale 3</a></span>
+              <span><a href="" data-anchor="anchor7">face arrière</a></span>
+              <span><a href="" data-anchor="anchor8">parking du dessus</a></span>
+            </div>
+          </div>
+          <div id="settings">
+            <h3>paramètres</h3>
+            <div>
+              <div>
+                <p>vue libre</p>
+                <input type="checkbox" name="mouvementBtn" id="mouvementBtn">
+                <span class="slidder">
+                  <span></span>
+                </span>
+              </div>
+              <div>
+                <p>rotation auto</p>
+                <input type="checkbox" name="autoRotateBtn" id="autoRotateBtn">
+                <span class="slidder">
+                  <span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside>
+          <span> -> </span>
+          <input type="checkbox" name="toggleMenu" id="toggleMenu" checked>
+        </aside>
+      </div>
+      <canvas id="webgl"></canvas>
+    </div>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
